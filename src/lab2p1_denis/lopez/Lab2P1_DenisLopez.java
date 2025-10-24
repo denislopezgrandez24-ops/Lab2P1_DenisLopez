@@ -48,7 +48,26 @@ public class Lab2P1_DenisLopez {
             }
             else
                 if (opcion==2){
-                    
+                    int contador =5;
+                    while (contador!=0){
+                    System.out.println("Intentos restantes: "+contador);
+                    System.out.println("PRESA");
+                    System.out.println("Elige un lugar en el que esconderte: ");
+                    System.out.println("1.-Tu cuarto");
+                    System.out.println("2.-La cocina");
+                    System.out.println("3.-El bano");
+                    int escondite = leer.nextInt();
+                    System.out.println("CAZADOR");
+                    System.out.println("Elige un lugar en el que buscaras: ");
+                    System.out.println("1.-Tu cuarto");
+                    System.out.println("2.-La cocina");
+                    System.out.println("3.-El bano");
+                    int buscar = leer.nextInt();
+                    if (escondite==buscar){
+                        System.out.println("HAS SIDO ENCONTRADO!!");
+                        contador = contador -1;
+                    }
+                    }
                 }
             else
                 if (opcion==3){
