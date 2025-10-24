@@ -23,7 +23,6 @@ public class Lab2P1_DenisLopez {
         System.out.println("4. Salir");
         System.out.println("Ingrese su opcion: ");
         int opcion = leer.nextInt();
-        char respuesta = 's';
         while (opcion!=4){
             if (opcion==1){
                 System.out.println("Ingrese un numero mayor que 1 y menor que 100");
@@ -34,13 +33,14 @@ public class Lab2P1_DenisLopez {
                     contador=contador+1;
                     System.out.println(+contador);
                     }
-                    if (contador%5==3){
+                    
+                    if (contador%3==0){
                         System.out.print("Hola");
                     }
-                    if (contador%3==5){
+                    if (contador%5==0){
                         System.out.print("Mundo");
                     }
-                    if (contador%5==3 && contador%3==5){
+                    if (contador%3==0 && contador%5==0){
                         System.out.println("Hola Mundo");
                     }
                 }
@@ -67,14 +67,30 @@ public class Lab2P1_DenisLopez {
                         System.out.println("HAS SIDO ENCONTRADO!!");
                         contador = contador -1;
                     }
+                    else
+                        System.out.println("Numero no valido");
                     }
                 }
             else
                 if (opcion==3){
-                    
+                    System.out.println("Ingrese numero mayor que cero: ");
+                    int numero1 = leer.nextInt();
+                    int contador =1;
+                    int suma=0;
+                    int potencia;
+                    while (numero1<=0){
+                        System.out.println("Numero no valido. Intente de nuevo");
+                        System.out.println("Ingrese numero mayor que cero: ");
+                        numero1 = leer.nextInt();
+                    }
+                    while (contador<=numero1){
+                        potencia=contador*contador;
+                        suma = potencia;
+                        contador= contador +1;
+                    }
+                      System.out.println("La suma de los cuadrados de los primeros"+numero1+"numeros naturales es de: "+suma);
                 }
         }
-        System.out.println("Numero no valido");
         System.out.println("Menu");
         System.out.println("1. Hola Mundo");
         System.out.println("2. Protege tu Nota");
